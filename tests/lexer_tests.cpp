@@ -1,7 +1,7 @@
 #define CATCH_CONFIG_MAIN
 #include "catch_amalgamated.hpp"
 
-#include "../src/lexer/lexer.h"
+#include "lexer/lexer.h"
 
 TEST_CASE("Empty string tokenizes to EOF")
 {
