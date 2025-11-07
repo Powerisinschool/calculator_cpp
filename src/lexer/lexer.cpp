@@ -12,10 +12,14 @@ Lexer::~Lexer()
 
 Token Lexer::next()
 {
+    Token tmp;
+    return tmp;
     // next implementation here
 }
 
 Token Lexer::peek() const
 {
+    Token tmp;
+    return tmp;
     // peek implementation here
 }
