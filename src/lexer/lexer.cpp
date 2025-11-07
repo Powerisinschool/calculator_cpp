@@ -1,6 +1,6 @@
 #include "lexer.h"
 
-Lexer::Lexer()
+Lexer::Lexer(const std::string &input)
 {
     // Constructor implementation
 }

@@ -1,3 +1,5 @@
+#include <string>
+
 struct Token
 {
     //
@@ -6,7 +8,7 @@ struct Token
 class Lexer
 {
 public:
-    Lexer();
+    Lexer(const std::string &input);
     ~Lexer();
 
     Token next();       // return next and advance
