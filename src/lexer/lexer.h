@@ -31,4 +31,11 @@ public:
 
     Token next();       // return next and advance
     Token peek() const; // inspect next token without advancing
+private:
+    size_t position_ = 0;
+    std::string source_;
+
+    // Helper to skip ' ' or '\t', '\n', etc.
+    void skipWhitespace();
+    Token readNumber();
 };
