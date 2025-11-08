@@ -47,6 +47,9 @@ Token Lexer::next()
     case ')':
         position_++;
         return {RPAREN, ")", 0};
+    case '|':
+        position_++;
+        return {ABS, "|", 0};
     default:
         if (std::isdigit(currentChar))
         {

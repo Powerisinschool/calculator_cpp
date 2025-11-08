@@ -4,7 +4,7 @@ add_executable(calc_tests
     catch_amalgamated.cpp
     lexer_tests.cpp
     ast_tests.cpp
-    # parser_tests.cpp
+    parser_tests.cpp
     # evaluator_tests.cpp
 )
 

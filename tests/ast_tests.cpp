@@ -21,6 +21,6 @@ TEST_CASE("Binary expression node holds correct operator and operands")
         std::unique_ptr<NumberExpr>(right));
 
     REQUIRE(expr->op == BinaryOp::PLUS);
-    REQUIRE(static_cast<NumberExpr *>(expr->left.get())->value == 3);
-    REQUIRE(static_cast<NumberExpr *>(expr->right.get())->value == 5);
+    REQUIRE(dynamic_cast<NumberExpr *>(expr->left.get())->value == 3);
+    REQUIRE(dynamic_cast<NumberExpr *>(expr->right.get())->value == 5);
 }

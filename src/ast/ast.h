@@ -11,6 +11,12 @@ struct NumberExpr : Expr
     NumberExpr(int val) : value(val) {}
 };
 
+enum class UnaryOp
+{
+    NEGATE,
+    ABS,
+};
+
 enum class BinaryOp
 {
     PLUS,
@@ -19,12 +25,21 @@ enum class BinaryOp
     DIVIDE
 };
 
+struct UnaryExpr : Expr
+{
+    UnaryOp op;
+    std::unique_ptr<Expr> expr;
+
+    UnaryExpr(UnaryOp op, std::unique_ptr<Expr> expr)
+        : op(op), expr(std::move(expr)) {}
+};
+
 struct BinaryExpr : Expr
 {
     BinaryOp op;
     std::unique_ptr<Expr> left;
     std::unique_ptr<Expr> right;
 
-    BinaryExpr(BinaryOp oper, std::unique_ptr<Expr> l, std::unique_ptr<Expr> r)
-        : op(oper), left(std::move(l)), right(std::move(r)) {}
+    BinaryExpr(BinaryOp op, std::unique_ptr<Expr> l, std::unique_ptr<Expr> r)
+        : op(op), left(std::move(l)), right(std::move(r)) {}
 };

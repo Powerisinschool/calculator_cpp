@@ -12,6 +12,8 @@ enum TokenType
     SLASH,     // '/'
     LPAREN,    // '('
     RPAREN,    // ')'
+    ABS,       // '|'
+    EXP,       // '^'
     EOF_TOKEN, // 'EOF'
     INVALID,   // optional, error handling
 };
